@@ -1,3 +1,6 @@
+"""Base page"""
+
+
 class BasePage:
     """Super class"""
     def __init__(self, browser, url):
