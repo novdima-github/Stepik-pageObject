@@ -1,14 +1,15 @@
 """Run: pytest -v --tb=line --language=en test_main_page.py"""
+# -*- coding: utf-8 -*-
 from pages.main_page import MainPage
 from pages.login_page import LoginPage
 
 
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
-    page = MainPage(browser, link)  # инициализируем Page Object, передаем в
-    # конструктор экземпляр драйвера и url адрес
-    page.open()  # открываем страницу
-    page.go_to_login_page()  # выполняем метод страницы -
-    # переходим на страницу логина
+    page = MainPage(browser, link)  # РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј Page Object, РїРµСЂРµРґР°РµРј РІ
+    # РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂ РґСЂР°Р№РІРµСЂР° Рё url Р°РґСЂРµСЃ
+    page.open()  # РѕС‚РєСЂС‹РІР°РµРј СЃС‚СЂР°РЅРёС†Сѓ
+    page.go_to_login_page()  # РІС‹РїРѕР»РЅСЏРµРј РјРµС‚РѕРґ СЃС‚СЂР°РЅРёС†С‹ -
+    # РїРµСЂРµС…РѕРґРёРј РЅР° СЃС‚СЂР°РЅРёС†Сѓ Р»РѕРіРёРЅР°
     login_page = LoginPage(browser, browser.current_url)
     login_page.should_be_login_page()
