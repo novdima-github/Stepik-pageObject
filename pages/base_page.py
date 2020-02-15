@@ -1,8 +1,10 @@
 """Base page"""
 from selenium.common.exceptions import NoSuchElementException
 
+
 class BasePage:
     """Super class"""
+
     def __init__(self, browser, url, timeout=3):
         self.browser = browser
         self.url = url
