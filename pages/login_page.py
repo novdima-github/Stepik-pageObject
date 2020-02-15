@@ -1,6 +1,7 @@
 from pages.base_page import BasePage
 from pages.locators import LoginPageLocators
 
+
 class LoginPage(BasePage):
     """Class login page"""
 
