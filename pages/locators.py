@@ -9,3 +9,11 @@ class MainPageLocators:
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+
+
+class ProductPageLocators:
+    """Locators for Product page"""
+    ADD_TO_BASKET = (By.CSS_SELECTOR, "button[value='Add to basket']")
+    BOOK_NAME = (By.XPATH, '//h1[contains(text(), "Coders at Work")]')
+    PRICE = (By.CSS_SELECTOR, "div.product_main p.price_color")
+
