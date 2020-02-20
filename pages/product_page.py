@@ -42,3 +42,13 @@ class ProductPage(BasePage):
         price = self.browser.find_element(*ProductPageLocators.PRICE) \
             .text
         assert price == "£19.99", "Wrong price"
+
+    def message_should_not_be_appeared(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def message_should_disappear(self):
+        assert self.is_disappeared(
+            *ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should disappear"

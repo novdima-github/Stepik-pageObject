@@ -13,6 +13,9 @@ class LoginPageLocators:
 
 class ProductPageLocators:
     """Locators for Product page"""
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages > div.alert.alert-safe"
+                                        ".alert-noicon.alert-success.fade.in "
+                                        "> div")
     ADD_TO_BASKET = (By.CSS_SELECTOR, "button[value='Add to basket']")
     BOOK_NAME = (By.XPATH, '//h1[contains(text(), "Coders at Work")]')
     PRICE = (By.CSS_SELECTOR, "div.product_main p.price_color")
