@@ -1,4 +1,4 @@
- # -*- coding: utf-8 -*-
+ -*- coding: utf-8 -*-
  Page Object tutorial
 
 Àêòèâàöèÿ v-env:
