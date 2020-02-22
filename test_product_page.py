@@ -1,5 +1,6 @@
 """Run: pytest -v --tb=line --language=en test_product_page.py"""
 # -*- coding: utf-8 -*-
+
 import pytest
 import time
 from pages.basket_page import BasketPage
