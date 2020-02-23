@@ -9,16 +9,6 @@ from pages.product_page import ProductPage
 
 
 @pytest.mark.need_review
-def test_guest_can_add_product_to_basket(browser):
-    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at" \
-           "-work_207/?promo=newYear2019 "
-    page = MainPage(browser, link)
-    page.open()
-    product_page = ProductPage(browser, browser.current_url)
-    product_page.add_to_cart()
-
-
-@pytest.mark.need_review
 @pytest.mark.parametrize('promo_offer',
                          ["0", "1", "3", "4", "5", "6", "7", "8", "9"])
 def test_guest_can_add_product_to_basket(browser, promo_offer):
@@ -114,6 +104,7 @@ class TestUserAddToBasketFromProductPage:
         product_page = ProductPage(browser, browser.current_url)
         product_page.message_should_not_be_appeared()
 
+    @pytest.mark.need_review    
     def test_user_can_add_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at" \
                "-work_207/?promo=newYear2019 "
